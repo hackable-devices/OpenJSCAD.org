@@ -41,7 +41,7 @@ var vm = require('vm');
 //include('./openscad.js');         // later
 
 global.lib = './';             // for now hard-coded
-global.nodeModules = '../../parts/node/lib/node_modules';  // for now hard-coded too
+global.nodeModules = '../../parts/node/lib/node_modules/';  // for now hard-coded too
 
 //if (!fs.existsSync(global.lib))           // requires node 0.10.1 
 //   global.lib = './';
