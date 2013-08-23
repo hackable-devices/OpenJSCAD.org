@@ -811,18 +811,18 @@ OpenJsCad.Processor.prototype = {
 */    
     var viewerdiv = document.createElement("div");
     viewerdiv.className = "viewer";
-    viewerdiv.style.width = '100%'; //this.viewerwidth; // + "px";
-    viewerdiv.style.height = '100%'; //this.viewerheight; // + "px";
-    viewerdiv.style.width = screen.width;
-    viewerdiv.style.height = screen.height;
+    // viewerdiv.style.width = '100%'; //this.viewerwidth; // + "px";
+    // viewerdiv.style.height = '100%'; //this.viewerheight; // + "px";
+    // viewerdiv.style.width = screen.width;
+    // viewerdiv.style.height = screen.height;
     //viewerdiv.style.overflow = 'hidden';
     viewerdiv.style.backgroundColor = "rgb(200,200,200)";
     this.containerdiv.appendChild(viewerdiv);
     this.viewerdiv = viewerdiv;
     try {
       //this.viewer = new OpenJsCad.Viewer(this.viewerdiv, this.viewerwidth, this.viewerheight, this.initialViewerDistance);
-      //this.viewer = new OpenJsCad.Viewer(this.viewerdiv, viewerdiv.offsetWidth, viewer.offsetHeight, this.initialViewerDistance);
-      this.viewer = new OpenJsCad.Viewer(this.viewerdiv, screen.width, screen.height, this.initialViewerDistance);
+      this.viewer = new OpenJsCad.Viewer(this.viewerdiv, viewerdiv.offsetWidth, viewer.offsetHeight, this.initialViewerDistance);
+      //this.viewer = new OpenJsCad.Viewer(this.viewerdiv, screen.width, screen.height, this.initialViewerDistance);
     } catch(e) {
       //      this.viewer = null;
       this.viewerdiv.innerHTML = "<b><br><br>Error: " + e.toString() + "</b><br><br>OpenJsCad currently requires Google Chrome or Firefox with WebGL enabled";
